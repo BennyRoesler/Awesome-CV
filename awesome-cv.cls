@@ -735,24 +735,12 @@
 
 
 %-------------------------------------------------------------------------------
-%          Commands for Custom Elements of Cover Letter - Custom Made
+%                         Commands for Custom Elements
 %-------------------------------------------------------------------------------
-
-% Define an entry of cv information extra curriculars 
-% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
-\newcommand*{\extracurricularentry}[5]{%
-  \vspace{-2.0mm}
-  \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{4.5cm} L{1.5cm}}
-  {\entrytitlestyle{#1} &}
-  {\entrypositionstyle{#2} & \entrypositionstyle{#2}}
-  \end{tabular*}%
-}
 
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
-\newcommand*{\cvnodesc}[4]{%
+\newcommand*{\twodates}[6]{%
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
@@ -760,7 +748,8 @@
     \ifempty{#2#3}
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{}
+      \entrypositionstyle{#1} & \entrydatestyle{#4} \\
+      & \entrydatestyle{#5}\\}
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#6}}
   \end{tabular*}%
 }

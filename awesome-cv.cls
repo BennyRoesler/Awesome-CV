@@ -753,3 +753,19 @@
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#6}}
   \end{tabular*}%
 }
+
+\newcommand*{\certentry}[5]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.7cm}}
+      {\entrytitlestyle{#2} & \\
+      \entrypositionstyle{#1} & \entrydatestyle{#3} \\
+      \entrypositionstyle{#4} & \entrydatestyle{#5} \\}
+    
+  \end{tabular*}%
+}
+
+
+
+

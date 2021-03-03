@@ -766,6 +766,16 @@
   \end{tabular*}%
 }
 
-
+\newcommand*{\dualeducation}[6]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.7cm}}
+      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+      \entrypositionstyle{#1} & \entrydatestyle{#4} \\
+      \entrypositionstyle{#5} & \entrydatestyle{#6} \\}
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{}}
+  \end{tabular*}%
+}
 
 
